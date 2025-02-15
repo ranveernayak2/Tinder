@@ -1,12 +1,21 @@
+import { BrowserRouter, Routes,Route } from "react-router-dom"
+import Body from "./Body"
 
 function App() {
 
 
   return (
     <>
-     <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <BrowserRouter basename="/">
+  <Routes>
+    <Route path="/" element={<Body/>}>
+    <Route path="/" element={<div>base</div>}/>
+    <Route path="/login" element={<div>Login</div>}/>
+    <Route path="/Profile" element={<div>Profile</div>}/>
+    
+    </Route>
+  </Routes>
+    </BrowserRouter>
     </>
   )
 }
